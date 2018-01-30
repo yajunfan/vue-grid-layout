@@ -87,7 +87,11 @@ export default {
     layout: {
       type: Array,
       required: true
-    }
+    },
+    layoutUpdating: {
+      type: Boolean,
+      default: false
+    },
   },
   data: function() {
     return {
@@ -199,7 +203,10 @@ export default {
           //console.log("### LAYOUT UPDATE!");
           this.lastLayoutLength = this.layout.length;
         }
-        compact(this.layout, this.verticalCompact);
+        if (this.layoutUpdating) {
+          compact(this.layout, this.verticalCompact);
+          this.$emit('update:layoutUpdating', false)
+        }
         this.eventBus.$emit("updateWidth", this.width);
         this.updateHeight();
       }
