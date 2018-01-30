@@ -63,42 +63,42 @@
   <script src="vue.min.js"></script>
   <script src="../dist/vue-grid-layout.min.js"></script>
   <script type="text/javascript">
-    Vue.config.debug = true
-    Vue.config.devtools = true
+    Vue.config.debug = true;
+    Vue.config.devtools = true;
 
-    var GridLayout = VueGridLayout.GridLayout
-    var GridItem = VueGridLayout.GridItem
+    var GridLayout = VueGridLayout.GridLayout;
+    var GridItem = VueGridLayout.GridItem;
 
     new Vue({
-      el: '#app1',
+      el: "#app1",
       components: {
         GridLayout,
         GridItem
       },
       data: {
         layout: [
-          { 'x': 0, 'y': 0, 'w': 2, 'h': 2, 'i': '0' },
-          { 'x': 2, 'y': 0, 'w': 2, 'h': 4, 'i': '1' }
+          { "x": 0, "y": 0, "w": 2, "h": 2, "i": "0" },
+          { "x": 2, "y": 0, "w": 2, "h": 4, "i": "1" }
         ],
         index: 0
       }
-    })
+    });
 
     new Vue({
-      el: '#app2',
+      el: "#app2",
       components: {
         GridLayout,
         GridItem
       },
       data: {
         layout: [
-          { 'x': 0, 'y': 0, 'w': 2, 'h': 2, 'i': '0' },
-          { 'x': 2, 'y': 0, 'w': 2, 'h': 4, 'i': '1' },
-          { 'x': 4, 'y': 0, 'w': 2, 'h': 2, 'i': '2' }
+          { "x": 0, "y": 0, "w": 2, "h": 2, "i": "0" },
+          { "x": 2, "y": 0, "w": 2, "h": 4, "i": "1" },
+          { "x": 4, "y": 0, "w": 2, "h": 2, "i": "2" }
         ],
         index: 0
       }
-    })
+    });
   </script>
 </body>
 
